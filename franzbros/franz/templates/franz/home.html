@@ -1,0 +1,44 @@
+{% extends 'franz/base.html' %}
+{% load static %}
+{% block content %}
+ <div class="jumbotron" id="jumbo">
+        <h1 class="display-3">Franz Bros LLC</h1>
+        <p class="lead">Your Neighborhood Landscapers</p>
+        <hr class="m-y-2">
+    </div>
+
+    <div id="secondHeader" class="container">
+        <div class="row">
+            <h1>What Franz Bros Provides</h1>
+            <p id="parText"></p>
+        </div>
+    </div>
+
+    <div class="card-deck-wrapper">
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src ="" alt="Stock image">
+                <div class="card-block">
+                    <h4 class="card-title">Fantastic Lawn Care</h4>
+                    <p class="card-text">Franz Bros LLC provides expert weekly lawn care and maintenance</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src ="" alt="Stock image">
+                <div class="card-block">
+                    <h4 class="card-title">Custom Landscaping</h4>
+                    <wp class="card-text">Turn your lawn dreams into reality with custom landscaping projects</wp>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src ="" alt="Stock image">
+                <div class="card-block">
+                    <h4 class="card-title">Lawn Care Expertise</h4>
+                    <p class="card-text">Find the answer to all your questions with our expert knowledge of lawn maintenance
+                    and gardening</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
