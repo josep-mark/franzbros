@@ -17,14 +17,16 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
+from franz import views as franz_views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('franz.urls', namespace='franz')),
-url(r'^favicon.ico$',
-        RedirectView.as_view(
-            url = staticfiles_storage.url('search/favicon.ico'),
-            permanent = False),
-        name = "favicon"),
+    url(r'^favicon.ico$',
+        RedirectView.as_view(url=staticfiles_storage.url('search/favicon.ico'),
+                             permanent=False), name="favicon"),
+    url(r'^about$', franz_views.about, name='about'),
+    url(r'^services', franz_views.services, name='services'),
+    url(r'^contact$', franz_views.contact, name='contact'),
+    url(r'', franz_views.home, name='home')
 ]
